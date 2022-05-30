@@ -13,4 +13,3 @@ def solve(S: str):
 test_cases = ['((()', ')()())', '(((((', '(((()()))())', ')))))(']
 for i in test_cases:
     print(solve(i), end=' ')
-
