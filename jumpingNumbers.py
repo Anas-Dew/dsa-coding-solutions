@@ -31,16 +31,26 @@ def solve(X: int):
 
     return int(''.join(x))
 
-
-# ----------------------------
-test_cases = [3892, 69 ,235, 10, 4343456, 50, 67]
-for i in test_cases:
-    print(solve(i))
-
 # -----------------------------
-jumping_numbers = [45676, 212, 121, 123, 210, 212, 232, 234, 321, 323, 343, 345, 432, 434, 454, 456, 543, 545, 565, 567, 654, 656, 676, 678, 765, 767, 787, 789, 876]
-for i in jumping_numbers:
-    if solve(i) == i:
-        print('test passed !')
-    else:
-        print('test failed at {}'.format(i))
+# jumping_numbers = [45676, 212, 121, 123, 210, 212, 232, 234, 321, 323, 343, 345, 432, 434, 454, 456, 543, 545, 565, 567, 654, 656, 676, 678, 765, 767, 787, 789, 876]
+# for i in jumping_numbers:
+#     if solve(i) == i:
+#         print('test passed !')
+#     else:
+#         print('test failed at {}'.format(i))
+# --------------------------------
+import unittest
+
+class test_cases(unittest.TestCase):
+
+    def test_jumping_numbers(self):
+        
+        self.assertEqual(solve(69),67)
+        self.assertEqual(solve(3892),3454)
+        self.assertEqual(solve(235),234)
+        self.assertEqual(solve(10),10)
+        self.assertEqual(solve(4343456),4343456)
+        self.assertEqual(solve(67),67)
+
+if __name__ == '__main__' :
+    unittest.main()
