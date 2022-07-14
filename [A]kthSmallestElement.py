@@ -6,10 +6,21 @@
 # THE MEHTOD
 # first sort the array
 # then subscript the array like array[index]. -> arr[k-1]. -1 is for avoidnig 0th index trap.
-# you got the kth smallest element.
+# y
 
+"""
+example 1 :
 
-def kthSmallest(arr : list, l, r, k):
+Input:
+N = 6
+arr[] = 7 10 4 3 20 15
+K = 3
+Output : 7
+Explanation :
+3rd smallest element in the given 
+array is 7.
+"""
+def kthSmallest(arr : list,k : int):
         '''
         arr : given array
         l : starting index of the array i.e 0
@@ -18,3 +29,7 @@ def kthSmallest(arr : list, l, r, k):
         '''
         arr.sort()
         return arr[k-1]
+
+arr = [6,5,4,3,32,5,7,98,9,8,6,43,2]
+k = 4
+print(kthSmallest(arr,k))
