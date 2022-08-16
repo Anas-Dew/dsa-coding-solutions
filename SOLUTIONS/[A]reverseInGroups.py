@@ -11,6 +11,7 @@ def reverseInGroups(arr, N, K):
     cArr2.reverse()
 
     cArr1.extend(cArr2)
+    arr = cArr1.copy()
     return cArr1
 
 
