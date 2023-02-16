@@ -2,7 +2,7 @@
 
 # Solution
 class Solution:
-    def maxProfit(self, prices: List[int]) -> int:
+    def maxProfit(self, prices: list[int]) -> int:
         maxProfits = 0
         step = 1
         for i in range(0, len(prices)-1, step):
